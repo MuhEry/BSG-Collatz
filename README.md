@@ -28,6 +28,9 @@ $f(n) = \begin{cases} n/2 & \text{eğer } n \equiv 0 \pmod{2} \\ 3n+1 & \text{e�
 2.  **Durum Güncelleme:** Sayı çift ise ikiye bölünür, tek ise 3 ile çarpılıp 1 eklenir.
 3.  **Döngü Koruması:** Collatz dizisi doğası gereği eninde sonunda 4-2-1 döngüsüne girer. Algoritma, sayı 1'e ulaştığında `Seed + i` değerini kullanarak durumu yeniden karıştırır (Re-seeding) ve döngüden çıkarır.
 
+### Akış Şeması:
+<img width="1024" height="1024" alt="Akış Şeması" src="https://github.com/user-attachments/assets/3b4a321a-564f-4602-b2c2-f3ee21770340" />
+
 ---
 
 ## 📂 Dosya Yapısı
