@@ -1,0 +1,29 @@
+ALGORİTMA: Collatz_Bit_Generator
+GİRDİ: Seed (Başlangıç Sayısı), N (İstenen Bit Sayısı)
+ÇIKTI: Bit Dizisi (Liste)
+
+BAŞLA
+    Dizi Bitleri = []
+    Mevcut_Durum = Seed
+    
+    DÖNGÜ (i = 0'dan N'e kadar):
+        
+        // 1. Rastgelelik Çıkarımı (Extraction)
+        Üretilen_Bit = Mevcut_Durum MOD 2
+        Bitleri'e Ekle(Üretilen_Bit)
+        
+        // 2. Collatz Fonksiyonu (State Update)
+        EĞER (Mevcut_Durum ÇİFT ise):
+            Mevcut_Durum = Mevcut_Durum / 2
+        DEĞİLSE:
+            Mevcut_Durum = (3 * Mevcut_Durum) + 1
+            
+        // 3. Döngü Koruması (Loop Guard)
+        // Eğer sayı 4-2-1 döngüsüne girerse (1'e ulaşırsa)
+        EĞER (Mevcut_Durum == 1):
+             Mevcut_Durum = (Mevcut_Durum + Seed + i) // Yeniden tohumla
+             
+    DÖNGÜ SONU
+    
+    DÖNDÜR Bitleri
+BİTİR
